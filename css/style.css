@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(9,121,65);
+    background: linear-gradient(180deg, rgba(9,121,65,1) 0%, rgba(161,161,161,1) 40%);
+}
+
+.contact-list,
+.chat {
+    height: 90vh;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.personal {
+    min-height: 60px;
+    background-color: blue;
+}
+
+.notis {
+    min-height: 90px;
+    background-color: yellow;
+}
+
+.search-contact {
+    min-height: 50px;
+    background-color: blueviolet;
+}
+
+.list {
+    background-color: lightgreen;
+    height: 620px;
+}
+
+.send-message {
+    min-height: 70px;
+    background-color: grey;
+}
