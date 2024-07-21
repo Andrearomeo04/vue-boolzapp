@@ -17,7 +17,23 @@
                         <div class="contact-list">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="personal"></div>
+                                    <div class="personal">
+                                        <div class="pfp-name d-flex justify-content-between">
+                                            <div class="left-info d-flex">
+                                                <div class="avatars">
+                                                    <img :src="me.avatar" alt="">
+                                                </div>
+                                                <div class="names d-flex align-items-center">
+                                                    <h5>{{ me.name }}</h5>
+                                                </div>
+                                            </div>
+                                            <div class="icons d-flex align-items-center">
+                                                <i class="fa-solid fa-circle-notch"></i>
+                                                <i class="fa-solid fa-message"></i>
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="notis"></div>
@@ -26,16 +42,18 @@
                                     <div class="search-contact"></div>
                                 </div>
                                 <div class="col-12">
-                                    <ul class="list-unstyled">
-                                        <li v-for="(list, index) in contacts" class="py-3 d-flex">
-                                            <div class="avatars">
-                                                <img :src="list.avatar" alt="">
-                                            </div>
-                                            <div class="names">
-                                                <h5>{{ list.name }}</h5>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="contacts">
+                                        <ul class="list-unstyled">
+                                            <li v-for="(list, index) in contacts" class="py-3 d-flex">
+                                                <div class="avatars">
+                                                    <img :src="list.avatar" alt="">
+                                                </div>
+                                                <div class="names">
+                                                    <h5>{{ list.name }}</h5>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -165,8 +165,11 @@ createApp({
                         }
                     ]
                 }
-            ]
-            
+            ],
+            me:{
+                    name: "Andrea",
+                    avatar: "./img/avatar_2.jpg",
+                }
         }
     }
 }).mount('#app')
