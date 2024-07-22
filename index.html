@@ -79,17 +79,17 @@
 
                     <!-- user-contact text-chat -->
                     <div class="col-8 p-0">
-                        <div class="chat d-flex flex-column">
+                        <div class="chat pattern d-flex flex-column">
 
                             <!-- contact info -->
                                 <div class="col-12">
                                     <div class="personal d-flex align-items-center justify-content-between">
                                         <div class="left-contact d-flex">
                                             <div class="avatars">
-                                                <img :src="contacts[0].avatar" alt="">
+                                                <img :src="contacts[activeIndex].avatar" alt="">
                                             </div>
                                             <div class="names">
-                                                <h5>{{ contacts[0].name}}</h5>
+                                                <h5>{{ contacts[activeIndex].name}}</h5>
                                             </div>
                                         </div>
                                         <div class="icons me-3">
@@ -101,9 +101,9 @@
                                 </div>
 
                                 <!-- background pattern -->
-                                <div class="col-12 flex-grow-1">
+                                <div class="col-12 flex-grow-1 position-relative">
                                     <div v-if="contacts[activeIndex]">
-                                        <div class="pattern" v-for="(messages, index) in contacts[activeIndex].messages">
+                                        <div class="flex-grow-1" v-for="(messages, index) in contacts[activeIndex].messages">
                                             <p>{{messages.message}}</p>
                                             <span>{{ messages.date }}</span>
                                         </div>

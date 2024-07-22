@@ -81,19 +81,14 @@ ul li:hover {
 /* text-chat */
 /* background pattern */
 .pattern {
-    height: 100%;
     background-image: url(../img/mine.jpg);
 }
 /* message style */
 .message-sent {
-    float: right;
-    width: 40%;
     background-color: lightgreen;
 }
 
 .message-received {
-    float: left;
-    width: 40%;
     background-color: white;
 }
 
