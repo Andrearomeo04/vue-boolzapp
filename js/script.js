@@ -166,6 +166,7 @@ createApp({
                     ]
                 }
             ],
+            textmessage: '',
             activeIndex: 0,
             me:{
                     name: "Sofia",
@@ -181,7 +182,27 @@ createApp({
             let now = new Date();
             let hour = now.getHours();
             let minute = now.getMinutes();
-            this.currenttime = `${hour}:${minute}`
+            return `${hour}:${minute}`
+        },
+        newMessage() {
+            setTimeout(() => {
+                let botMessage = {
+                    date: this.getCurrentTime(),
+                    message: 'ok',
+                    status: "received"
+                }
+                this.contacts[this.activeIndex].messages.push(botMessage)
+            }, 1000);
+            
+            if (this.textmessage !== '') {
+                let newMessage = {
+                    date: this.getCurrentTime(),
+                    message: this.textmessage,
+                    status: "sent"
+                }
+                this.contacts[this.activeIndex].messages.push(newMessage)
+                this.textmessage = ''
+            }
         }
     }
 }).mount('#app')
