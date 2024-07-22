@@ -12,8 +12,7 @@ body{
 
 .contact-list,
 .chat {
-    height: 95vh;   
-    border: 1px solid black;
+    height: 95vh;
 }
 
 .personal {
@@ -23,7 +22,7 @@ body{
 
 .notis {
     min-height: 90px;
-    background-color: yellow;
+    background-color: #8dd9fb;
 }
 
 .search-contact {
@@ -31,13 +30,9 @@ body{
     background-color: blueviolet;
 }
 
-.contacts {
-    background-color: white;
-}
-
 .send-message {
     min-height: 70px;
-    background-color: grey;
+    background-color: blueviolet;
 }
 
 .avatars img {
@@ -46,10 +41,18 @@ body{
     margin: 0 25px;
 }
 
-
-
 .icons i {
     margin: 0 10px;
     color: gray;
     cursor: pointer;
+}
+
+.icon-notis span {
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.icon-notis span i {
+    color: #8dd9fb;
 }
