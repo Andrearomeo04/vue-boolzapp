@@ -56,3 +56,11 @@ body{
 .icon-notis span i {
     color: #8dd9fb;
 }
+
+.notis h5 {
+    font-size: 15px;
+}
+.notis p a {
+    font-size: 12px;
+    color: gray;
+}
