@@ -167,8 +167,8 @@ createApp({
                 }
             ],
             me:{
-                    name: "Andrea",
-                    avatar: "./img/avatar_2.jpg",
+                    name: "Sofia",
+                    avatar: "./img/avatar_io.jpg",
                 }
         }
     }

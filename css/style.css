@@ -4,51 +4,35 @@
     box-sizing: border-box;
 }
 
-body{
-    background: rgb(9,121,65);
-    background: linear-gradient(180deg, rgba(9,121,65,1) 0%, rgba(161,161,161,1) 40%);
+body {
+    background: linear-gradient(180deg, rgb(0,149,135) 0%, rgb(0,149,135) 15%, rgb(217,218,211) 15%, rgb(217,218,211) 100%);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+/* container */
 .contact-list,
 .chat {
     height: 95vh;
 }
 
+
+/* top section */
 .personal {
     background-color: rgb(233, 233, 233);
     padding: 10px 0;
     border-right: 1px solid rgb(202, 202, 202);
 }
 
+/* left col */
+
+/* notification settings */
 .notis {
     min-height: 90px;
     background-color: #8dd9fb;
 }
 
-.search-contact {
-    background-color: rgb(248, 248, 248);
-}
-
-.send-message {
-    min-height: 70px;
-    background-color: #f2ede9;
-}
-
-.avatars img {
-    width: 50px;
-    border-radius: 50%;
-    margin: 0 25px;
-}
-
-.icons i {
-    margin: 0 10px;
-    color: gray;
-    cursor: pointer;
-}
-
 .icon-notis span {
-    background-color: white;
     padding: 15px;
     border-radius: 50%;
 }
@@ -65,6 +49,34 @@ body{
     color: gray;
 }
 
+
+/* searchable contacts */
+.search-contact {
+    background-color: rgb(248, 248, 248);
+}
+
+/* contacts */
+.avatars img {
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 25px;
+}
+
+.icons i {
+    margin: 0 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+/* right col */
+
+/* text-chat */
+/* background pattern */
+.pattern {
+    height: 100%;
+    background-image: url(../img/mine.jpg);
+}
+/* message style */
 .message-sent {
     float: right;
     width: 40%;
@@ -72,7 +84,12 @@ body{
 }
 
 .message-received {
-    float: right;
+    float: left;
     width: 40%;
     background-color: white;
+}
+
+.send-message {
+    min-height: 70px;
+    background-color: #f2ede9;
 }
