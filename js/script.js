@@ -166,10 +166,16 @@ createApp({
                     ]
                 }
             ],
+            activeIndex: 0,
             me:{
                     name: "Sofia",
                     avatar: "./img/avatar_io.jpg",
                 }
+        }
+    },
+    methods: {
+        selectactivecontact(index) {
+            this.activeIndex = index
         }
     }
 }).mount('#app')

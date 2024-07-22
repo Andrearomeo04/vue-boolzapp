@@ -67,6 +67,14 @@ body {
     color: gray;
     cursor: pointer;
 }
+.contacts {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+ul li:hover {
+    background-color: rgb(231, 231, 231);
+}
 
 /* right col */
 
