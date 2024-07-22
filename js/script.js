@@ -176,6 +176,12 @@ createApp({
     methods: {
         selectactivecontact(index) {
             this.activeIndex = index
+        },
+        getCurrentTime() {
+            let now = new Date();
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            this.currenttime = `${hour}:${minute}`
         }
     }
 }).mount('#app')
