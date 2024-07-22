@@ -85,11 +85,29 @@ ul li:hover {
 }
 /* message style */
 .message-sent {
+    max-width: 40%;
     background-color: lightgreen;
+    align-self: flex-end;
+    margin-left: auto;
 }
 
 .message-received {
+    max-width: 40%;
     background-color: white;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.message-received span,
+.message-sent span {
+    bottom: 5px;
+    right: 10px;
+    font-size: 14px;
+}
+
+.message-sent,
+.message-received {
+    border-radius: 10px;
 }
 
 .send-message {
