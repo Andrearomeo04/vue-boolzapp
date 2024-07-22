@@ -18,6 +18,7 @@ body{
 .personal {
     background-color: rgb(233, 233, 233);
     padding: 10px 0;
+    border-right: 1px solid rgb(202, 202, 202);
 }
 
 .notis {
@@ -62,4 +63,16 @@ body{
 .notis p a {
     font-size: 12px;
     color: gray;
+}
+
+.message-sent {
+    float: right;
+    width: 40%;
+    background-color: lightgreen;
+}
+
+.message-received {
+    float: right;
+    width: 40%;
+    background-color: white;
 }

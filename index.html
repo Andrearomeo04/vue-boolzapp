@@ -71,7 +71,21 @@
                     <div class="col-8 p-0">
                         <div class="chat d-flex flex-column">
                                 <div class="col-12 flex-grow-1">
-                                    <div class="personal"></div>
+                                    <div class="personal d-flex align-items-center justify-content-between">
+                                        <div class="left-contact d-flex">
+                                            <div class="avatars">
+                                                <img :src="contacts[0].avatar" alt="">
+                                            </div>
+                                            <div class="names">
+                                                <h5>{{ contacts[0].name}}</h5>
+                                            </div>
+                                        </div>
+                                        <div class="icons me-3">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <i class="fa-solid fa-link"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>   
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="send-message d-flex align-items-center px-5">
