@@ -180,12 +180,16 @@ createApp({
         selectactivecontact(index) {
             this.activeIndex = index
         },
+
+        // date function
         getCurrentTime() {
             let now = new Date();
             let hour = now.getHours();
             let minute = now.getMinutes();
             return `${hour}:${minute}`
         },
+
+        // send a new message function
         newMessage() {
             setTimeout(() => {
                 let botMessage = {
@@ -206,6 +210,8 @@ createApp({
                 this.textmessage = ''
             }
         },
+
+        // filter contacts function
         filterContacts() {
             if (this.searchContact === '' || this.searchContact === ' ') {
                 this.filteredContacts = this.contacts;
@@ -214,6 +220,15 @@ createApp({
                     contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
                 );
             }
+        },
+
+        // cut message function
+        dottedmsg(message) {
+            const maxLength = 35
+            if (message.length > maxLength) {
+                return message.substring(0, maxLength) + '...';
+            }
+            return message;
         }
     },
     mounted() {

@@ -62,12 +62,14 @@
                                 <div class="col-12">
                                     <div class="contacts">
                                         <ul class="list-unstyled">
-                                            <li v-for="(list, index) in filteredContacts" class="py-3 d-flex" @click="selectactivecontact(index)">
+                                            <li v-for="(list, index) in filteredContacts" class="py-3 d-flex position-relative" @click="selectactivecontact(index)">
                                                 <div class="avatars">
                                                     <img :src="list.avatar" alt="">
                                                 </div>
                                                 <div class="names">
                                                     <h5>{{ list.name }}</h5>
+                                                    <span>{{ dottedmsg(list.messages[list.messages.length - 1].message) }}</span>
+                                                    <span class="position-absolute">{{ list.messages[list.messages.length - 1].date }}</span>
                                                 </div>
                                             </li>
                                         </ul>

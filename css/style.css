@@ -114,3 +114,12 @@ ul li:hover {
     min-height: 70px;
     background-color: #f2ede9;
 }
+
+.names span {
+    color: gray;
+}
+
+.names span:last-child {
+    top: 10px;
+    right: 10px;
+}
