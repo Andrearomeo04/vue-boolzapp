@@ -109,6 +109,13 @@
                                             <div :class="messages.status === 'sent' ? 'message-sent' : 'message-received'" class="p-2 my-3 position-relative">
                                                 <p>{{messages.message}}</p>
                                                 <span class="position-absolute">{{ messages.date }}</span>
+                                                <div class="dropdown">
+                                                    <button class="dropdown-button bg-transparent" @click="toggleDropdown(index)"><i class="fas fa-angle-down"></i></button>
+                                                    <div class="dropdown-content" :class="visibleDropdown ? 'd-block' : 'd-none'">
+                                                        <a href="#">Message info</a>
+                                                        <a href="#">Delete message</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

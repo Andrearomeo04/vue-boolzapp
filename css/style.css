@@ -115,6 +115,7 @@ ul li:hover {
     background-color: #f2ede9;
 }
 
+/* user contact list last message and date */
 .names span {
     color: gray;
 }
@@ -123,3 +124,38 @@ ul li:hover {
     top: 10px;
     right: 10px;
 }
+
+/* dropdown */
+.dropdown {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.dropdown-button {
+    color: gray;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+

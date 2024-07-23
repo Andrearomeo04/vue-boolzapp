@@ -173,7 +173,8 @@ createApp({
                     avatar: "./img/avatar_io.jpg",
                 },
                 searchContact: '',
-            filteredContacts: []
+            filteredContacts: [],
+            visibleDropdown: false
         }
     },
     methods: {
@@ -229,6 +230,18 @@ createApp({
                 return message.substring(0, maxLength) + '...';
             }
             return message;
+        },
+        toggleDropdown(index) {
+            if (this.visibleDropdown === index) {
+                this.visibleDropdown = false      
+            } else {
+                this.visibleDropdown = index
+            }
+        },
+        deleteMessage(index) {
+            if (confirm('Sei sicuro di voler eliminare il messaggio?')) {
+                this.contacts[index].messages[index].splice(index, 1)
+            }
         }
     },
     mounted() {
