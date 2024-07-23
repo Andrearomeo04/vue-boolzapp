@@ -217,8 +217,8 @@ createApp({
             if (this.searchContact === '' || this.searchContact === ' ') {
                 this.filteredContacts = this.contacts;
             } else {
-                this.filteredContacts = this.contacts.filter(contact => 
-                    contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+                this.filteredContacts = this.contacts.filter(contacts => 
+                    contacts.name.toLowerCase().includes(this.searchContact.toLowerCase())
                 );
             }
         },
