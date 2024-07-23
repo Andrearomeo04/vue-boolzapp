@@ -62,7 +62,7 @@
                                 <div class="col-12">
                                     <div class="contacts">
                                         <ul class="list-unstyled">
-                                            <li v-for="(list, index) in filteredContacts" class="py-3 d-flex position-relative" @click="selectactivecontact(index)">
+                                            <li v-for="(list, index) in filteredContacts" class="py-3 d-flex position-relative"  @click="selectactivecontact(list.id)">
                                                 <div class="avatars">
                                                     <img :src="list.avatar" alt="">
                                                 </div>
@@ -88,10 +88,10 @@
                                     <div class="personal d-flex align-items-center justify-content-between">
                                         <div class="left-contact d-flex">
                                             <div class="avatars">
-                                                <img :src="contacts[activeIndex].avatar" alt="">
+                                                <img :src="contacts[activeid].avatar" alt="">
                                             </div>
                                             <div class="names">
-                                                <h5>{{ contacts[activeIndex].name}}</h5>
+                                                <h5>{{ contacts[activeid].name}}</h5>
                                             </div>
                                         </div>
                                         <div class="icons me-3">
@@ -104,8 +104,8 @@
 
                                 <!-- background pattern -->
                                 <div class="col-12 flex-grow-1 position-relative px-3">
-                                    <div v-if="contacts[activeIndex]">
-                                        <div class="flex-grow-1" v-for="(messages, index) in contacts[activeIndex].messages">
+                                    <div v-if="contacts[activeid]">
+                                        <div class="flex-grow-1" v-for="(messages, index) in contacts[activeid].messages">
                                             <div :class="messages.status === 'sent' ? 'message-sent' : 'message-received'" class="p-2 my-3 position-relative">
                                                 <p>{{messages.message}}</p>
                                                 <span class="position-absolute">{{ messages.date }}</span>

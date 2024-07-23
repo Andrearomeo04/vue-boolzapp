@@ -5,6 +5,7 @@ createApp({
         return {
             contacts: [
                 {
+                    id: 0,
                     name: "Michele",
                     avatar: "./img/avatar_1.jpg",
                     visible: true,
@@ -27,6 +28,7 @@ createApp({
                     ]
                 },
                 {
+                    id: 1,
                     name: "Fabio",
                     avatar: "./img/avatar_2.jpg",
                     visible: true,
@@ -49,6 +51,7 @@ createApp({
                     ]
                 },
                 {
+                    id: 2,
                     name: "Samuele",
                     avatar: "./img/avatar_3.jpg",
                     visible: true,
@@ -71,6 +74,7 @@ createApp({
                     ]
                 },
                 {
+                    id: 3,
                     name: "Alessandro B.",
                     avatar: "./img/avatar_4.jpg",
                     visible: true,
@@ -88,6 +92,7 @@ createApp({
                     ]
                 },
                 {
+                    id: 4,
                     name: "Alessandro L.",
                     avatar: "./img/avatar_5.jpg",
                     visible: true,
@@ -105,6 +110,7 @@ createApp({
                     ]
                 },
                 {
+                    id: 5,
                     name: "Claudia",
                     avatar: "./img/avatar_6.jpg",
                     visible: true,
@@ -127,6 +133,7 @@ createApp({
                     ]
                 },
                 {
+                    id: 6,
                     name: "Federico",
                     avatar: "./img/avatar_7.jpg",
                     visible: true,
@@ -144,6 +151,7 @@ createApp({
                     ]
                 },
                 {
+                    id:7,
                     name: "Davide",
                     avatar: "./img/avatar_8.jpg",
                     visible: true,
@@ -167,7 +175,7 @@ createApp({
                 }
             ],
             textmessage: '',
-            activeIndex: 0,
+            activeid: 0,
             me:{
                     name: "Sofia",
                     avatar: "./img/avatar_io.jpg",
@@ -178,8 +186,10 @@ createApp({
         }
     },
     methods: {
-        selectactivecontact(index) {
-            this.activeIndex = index
+        selectactivecontact(id) {
+            this.activeid = id
+            this.searchContact = ''
+            this.filteredContacts = this.contacts;
         },
 
         // date function
@@ -198,7 +208,7 @@ createApp({
                     message: 'ok',
                     status: "received"
                 }
-                this.contacts[this.activeIndex].messages.push(botMessage)
+                this.contacts[this.activeid].messages.push(botMessage)
             }, 1000);
             
             if (this.textmessage !== '') {
@@ -207,7 +217,7 @@ createApp({
                     message: this.textmessage,
                     status: "sent"
                 }
-                this.contacts[this.activeIndex].messages.push(newMessage)
+                this.contacts[this.activeid].messages.push(newMessage)
                 this.textmessage = ''
             }
         },
@@ -217,8 +227,8 @@ createApp({
             if (this.searchContact === '' || this.searchContact === ' ') {
                 this.filteredContacts = this.contacts;
             } else {
-                this.filteredContacts = this.contacts.filter(contacts => 
-                    contacts.name.toLowerCase().includes(this.searchContact.toLowerCase())
+                this.filteredContacts = this.contacts.filter(contact => 
+                    contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
                 );
             }
         },
@@ -240,7 +250,7 @@ createApp({
         },
         deleteMessage(index) {
             if (confirm('Sei sicuro di voler eliminare il messaggio?')) {
-                this.contacts[this.activeIndex].messages.splice(index, 1)
+                this.contacts[this.activeid].messages.splice(index, 1)
             }
             this.visibleDropdown = false
         }
