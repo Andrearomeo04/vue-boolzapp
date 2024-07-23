@@ -240,8 +240,9 @@ createApp({
         },
         deleteMessage(index) {
             if (confirm('Sei sicuro di voler eliminare il messaggio?')) {
-                this.contacts[index].messages[index].splice(index, 1)
+                this.contacts[this.activeIndex].messages.splice(index, 1)
             }
+            this.visibleDropdown = false
         }
     },
     mounted() {

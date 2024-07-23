@@ -111,9 +111,9 @@
                                                 <span class="position-absolute">{{ messages.date }}</span>
                                                 <div class="dropdown">
                                                     <button class="dropdown-button bg-transparent" @click="toggleDropdown(index)"><i class="fas fa-angle-down"></i></button>
-                                                    <div class="dropdown-content" :class="visibleDropdown ? 'd-block' : 'd-none'">
+                                                    <div class="dropdown-content" :class="visibleDropdown === index ? 'd-block' : 'd-none'">
                                                         <a href="#">Message info</a>
-                                                        <a href="#">Delete message</a>
+                                                        <a href="#" @click="deleteMessage(index)">Delete message</a>
                                                     </div>
                                                 </div>
                                             </div>
