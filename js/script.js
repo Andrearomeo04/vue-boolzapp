@@ -171,7 +171,9 @@ createApp({
             me:{
                     name: "Sofia",
                     avatar: "./img/avatar_io.jpg",
-                }
+                },
+                searchContact: '',
+            filteredContacts: []
         }
     },
     methods: {
@@ -203,6 +205,18 @@ createApp({
                 this.contacts[this.activeIndex].messages.push(newMessage)
                 this.textmessage = ''
             }
+        },
+        filterContacts() {
+            if (this.searchContact === '' || this.searchContact === ' ') {
+                this.filteredContacts = this.contacts;
+            } else {
+                this.filteredContacts = this.contacts.filter(contact => 
+                    contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+                );
+            }
         }
+    },
+    mounted() {
+        this.filteredContacts = this.contacts
     }
 }).mount('#app')

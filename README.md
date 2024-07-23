@@ -22,7 +22,7 @@ Buon lavoro e buon divertimento!
  soluzione
 
  1.definisco la proprietà active, che mi servira per mostrare il contenuto della chat del contatto cliccato, attraverso gli indici dell'array di oggetti
- 2.creo una funzione che assegna la proprieta active in base al contatto cliccato
+ 2.creo una funzione che assegna la proprieta active in base al contatto cliccato   
 
  Milestone 3
  ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando

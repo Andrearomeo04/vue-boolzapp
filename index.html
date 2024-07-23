@@ -54,7 +54,7 @@
                                 <!-- searchable contact -->
                                 <div class="col-12">
                                     <div class="search-contact p-3">
-                                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
+                                        <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" v-model="searchContact" @input="filterContacts">
                                     </div>
                                 </div>
 
@@ -62,7 +62,7 @@
                                 <div class="col-12">
                                     <div class="contacts">
                                         <ul class="list-unstyled">
-                                            <li v-for="(list, index) in contacts" class="py-3 d-flex" @click="selectactivecontact(index)">
+                                            <li v-for="(list, index) in filteredContacts" class="py-3 d-flex" @click="selectactivecontact(index)">
                                                 <div class="avatars">
                                                     <img :src="list.avatar" alt="">
                                                 </div>
